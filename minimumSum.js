@@ -11,5 +11,16 @@ function minimumSum(coinsObj) {
 }
 
 function minimumSumOptimized(coinsObj) {
-	
+  const coins = coinsObj.coins
+  let max = 0;
+  let sum = 0;
+  
+  for (let i = 0; i < coins.length; i++) {
+  	if (coins[i] > max) {
+    	max = coins[i];
+    }
+    sum += coins[i];
+  }
+  
+  return (sum - max) + 1;
 }
