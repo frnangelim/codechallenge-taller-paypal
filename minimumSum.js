@@ -1,7 +1,9 @@
 function minimumSum(coinsObj) {
-	const coins = coinsObj.coins
-  if (coins.length <= 1)
+  const coins = coinsObj.coins
+  if (coins.length === 0)
   	return 0;
+  if (coins.length === 1)
+  	return coins[0] + 1;
    
   const coinsSorted = coins.sort((a, b) => a > b ? 1 : -1);
   coinsSorted.pop();
@@ -9,5 +11,5 @@ function minimumSum(coinsObj) {
 }
 
 function minimumSumOptimized(coinsObj) {
-
+	
 }
